@@ -1,0 +1,27 @@
+<html>
+<body>
+
+   <p><strong>Estas buscando: {{query}}</strong></p>
+ 
+{% if repuesto %}
+    <p>Repuestos encontrados: {{repuesto|length}} repuestos</p>
+
+    <ul>
+
+        {% for rpst in repuesto %}
+           <li>
+
+           Nombre: {{rpst.nombre}} &nbsp; Precio: {{rpst.precio}} &nbsp; 
+
+           </li>
+        {% endfor %}
+
+    </ul>
+
+{% else %}
+   <p>No se encuentra el repuesto</p>
+
+{% endif %}
+
+</body>
+</html>

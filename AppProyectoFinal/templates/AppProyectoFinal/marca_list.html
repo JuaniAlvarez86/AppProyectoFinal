@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcas_List</title>
+</head>
+<body>
+
+    <h1>Marcas del taller</h1>
+    <ul>
+        {% for marca in object_list %}
+
+            <li>
+                <p>NOMBRE: {{ marca.nombre }} </p>
+                <p> 
+                    <a href="{% url 'Detail' marca.id %}">Ver</a> | 
+                    <a href="{% url 'Edit' marca.id %}">Editar</a> | 
+                    <a href="{% url 'Delete' marca.id %}">Borrar</a> 
+                
+                </p> 
+            </li>
+
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'New'  %}">Nuevo</a> | 
+
+    <br>
+
+    <button>
+        <a href="../marcas">Volver</a>
+    </button>
+
+</body>
+</html>
