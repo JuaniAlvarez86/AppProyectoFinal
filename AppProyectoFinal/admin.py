@@ -11,3 +11,5 @@ admin.site.register(Repuesto)
 admin.site.register(Dueño)
 
 admin.site.register(Marca)
+
+admin.site.register(Avatar)
